@@ -1,0 +1,41 @@
+import os,sys
+import urllib2
+import re
+from bs4 import BeautifulSoup
+import xml_calc_score
+import xml_similarity
+qa_f1=[]
+qa_f2=[]
+qa_pair_score=[]
+question_all=[]
+inp= sys.argv[1]
+for root, dirs, files in os.walk(inp, topdown=False):
+    for file_i in files:
+		fp=open(root+"/"+file_i).read()
+		soup=BeautifulSoup(fp,'xml')
+		for seg in soup.find_all('segment'):
+			correct_ans=seg.text
+			#print correct_ans
+			for qa_pair in seg.find_all('question-answer-pair'):
+				question=qa_pair.question.string
+				qa_f1.append(xml_calc_score.cal_score(question))
+				answer=qa_pair.answer.string
+				qa_f2.append(xml_similarity.find_similarity(question,answer,correct_ans))
+				question_all.append(question)
+				#print question
+			break
+		#fp.close()
+#print qa_f1
+#print qa_f2
+#print len(qa_f1)
+#print len(question_all)
+print "The Top 5 most Relevent Questions are : \n"
+for i in range(0,len(qa_f1)):
+	l=[]
+	l.append(qa_f1[i]*0.27+qa_f2[i]*0.73)
+	l.append(question_all[i])
+	qa_pair_score.append(l)
+#print qa_pair_score
+qa_pair_score=sorted(qa_pair_score, key=lambda x: x[0])
+for i in range (0,5):
+	print qa_pair_score[i][1]

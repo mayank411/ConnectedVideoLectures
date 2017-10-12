@@ -1,0 +1,31 @@
+1.) Line 1, column 1, Rule ID: MORFOLOGIK_RULE_EN_GB
+Message: Possible spelling mistake found
+Lemmatisation (or lemmatization) in linguistics is the pro...
+^^^^^^^^^^^^^                                             
+
+2.) Line 1, column 19, Rule ID: MORFOLOGIK_RULE_EN_GB
+Message: Possible spelling mistake found
+Lemmatisation (or lemmatization) in linguistics is the process of grouping t...
+                  ^^^^^^^^^^^^^                                             
+
+3.) Line 3, column 31, Rule ID: MORFOLOGIK_RULE_EN_GB
+Message: Possible spelling mistake found
+... useful to me. In computational linguistics, lemmatisation is the algorithmic process of determining th...
+                                                ^^^^^^^^^^^^^                                             
+
+4.) Line 3, column 155, Rule ID: MORFOLOGIK_RULE_EN_GB
+Message: Possible spelling mistake found
+...ed on its intended meaning. Unlike stemming, lemmatisation depends on correctly identifying the intende...
+                                                ^^^^^^^^^^^^^                                             
+
+5.) Line 3, column 339, Rule ID: MORFOLOGIK_RULE_EN_GB
+Message: Possible spelling mistake found
+Suggestion: neighbouring; neigh boring
+...r context surrounding that sentence, such as neighboring sentences or even an entire document. As a r...
+                                                ^^^^^^^^^^^                                             
+
+6.) Line 3, column 423, Rule ID: MORFOLOGIK_RULE_EN_GB
+Message: Possible spelling mistake found
+... document. As a result, developing efficient lemmatisation algorithms is an open area of research. 
+                                                ^^^^^^^^^^^^^                                         
+Time: 3861ms for 5 sentences (1.3 sentences/sec)
